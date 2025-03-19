@@ -1,0 +1,9 @@
+server:
+  port: 8082
+
+db:
+  host: postgres_main
+  port: 5432
+  user: admin
+  password: admin
+  db_name: lgm8_db
