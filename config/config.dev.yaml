@@ -7,3 +7,9 @@ db:
   user: admin
   password: admin
   db_name: lgm8_db
+
+nginx:
+  base_url: http://nginx
+
+auth:
+  jwks: "/api/auth/v1/token/jwks"

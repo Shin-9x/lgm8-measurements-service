@@ -11,6 +11,8 @@ import (
 type Config struct {
 	Server ServerConfig
 	DB     DBConfig
+	NGINX  NGINXConfig
+	Auth   AuthConfig
 }
 
 // It represents the property port for the API server
@@ -24,6 +26,14 @@ type DBConfig struct {
 	User     string `mapstructure:"user"`
 	Password string `mapstructure:"password"`
 	DBName   string `mapstructure:"db_name"`
+}
+
+type NGINXConfig struct {
+	BaseURL string `mapstructure:"base_url"`
+}
+
+type AuthConfig struct {
+	JWKS string `mapstructure:"jwks"`
 }
 
 // It loads configuration from files and environment variables
